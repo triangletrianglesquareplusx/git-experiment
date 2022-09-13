@@ -6,11 +6,11 @@ import "./App.css";
 
 function App() {
   console.log("app running");
-  const [name, setName] = useState("");
+
   const { user, isLoading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const changeHandler = (e) => {
-    setName(e.target.value);
+    console.log("he");
   };
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function App() {
       try {
         const person = await fetch("https://swapi.dev/api/people/2");
         const response = await person.json();
-        setName(response.name);
+        //setName(response.name);
         dispatch(updateUser(response.name));
       } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Paragraph name={name} />
+        <Paragraph name={user} />
         <div>
           <input type="text" onChange={changeHandler} />
           {user && <p>There is some user!</p>}

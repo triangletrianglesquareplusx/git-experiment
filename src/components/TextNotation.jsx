@@ -6,6 +6,7 @@ function TextNotation() {
     <>
       <div>This is a friendly TextNotation</div>
       <p>This is added text</p>
+      <p>This is a second p</p>
     </>
   );
 }

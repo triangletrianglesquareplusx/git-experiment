@@ -4,7 +4,7 @@ function Paragraph({ name }) {
   const [internalParagraphState, setInternalParagraphState] = useState("");
   console.log("para running");
   useEffect(() => {
-    console.log("an effect is running");
+    console.log("an effect in paragraph is running");
     setInternalParagraphState("para");
   }, []);
   return (
@@ -16,4 +16,4 @@ function Paragraph({ name }) {
   );
 }
 
-export default React.memo(Paragraph);
+export default Paragraph;

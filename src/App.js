@@ -8,6 +8,7 @@ function App() {
   const changeHandler = (e) => {
     setName(e.target.value);
   };
+
   return (
     <div className="App">
       <header className="App-header">

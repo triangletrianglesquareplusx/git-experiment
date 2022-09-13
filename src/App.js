@@ -14,6 +14,7 @@ function App() {
         <Paragraph name={name} />
         <div>
           <input type="text" onChange={changeHandler} />
+          <p>Hey this is test remote!</p>
         </div>
       </header>
     </div>
